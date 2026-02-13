@@ -1,0 +1,8 @@
+# Form submission redirect
+/contact  /thank-you.html  200
+
+# Netlify form success redirect
+/success  /thank-you.html  200
+
+# Catch all redirect (optional)
+/*  /index.html  200 

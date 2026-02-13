@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P5ZVBXT');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Smart Pain Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .wave-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .scrolling-pattern {
+            display: flex;
+            animation: scroll 20s linear infinite;
+            width: fit-content;
+        }
+        
+        .scrolling-pattern img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+        }
+        
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-33.33%);
+            }
+        }
+        .wave {
+            position: absolute;
+            width: 200%;
+            height: 200px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%231e3a8a" fill-opacity="0.3" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: 1440px 200px;
+            animation: wave 10s linear infinite;
+            bottom: 0;
+            left: 0;
+        }
+        .wave:nth-child(2) {
+            bottom: 0;
+            opacity: 0.5;
+            animation: wave 7s linear infinite reverse;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000000" fill-opacity="0.3" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+        }
+        .wave:nth-child(3) {
+            bottom: 0;
+            opacity: 0.2;
+            animation: wave 5s linear infinite;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%231e3a8a" fill-opacity="0.3" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+        }
+        @keyframes wave {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1d4ed8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    keyframes: {
+                        'fade-in-down': {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(-20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            },
+                        },
+                        'fade-in-up': {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            },
+                        },
+                        'fade-in-right': {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateX(20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateX(0)'
+                            },
+                        },
+                        'fade-in-left': {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateX(-20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateX(0)'
+                            },
+                        },
+                        'float': {
+                            '0%, 100%': {
+                                transform: 'translateY(0)'
+                            },
+                            '50%': {
+                                transform: 'translateY(-10px)'
+                            },
+                        }
+                    },
+                    animation: {
+                        'fade-in-down': 'fade-in-down 0.5s ease-out',
+                        'fade-in-up': 'fade-in-up 0.5s ease-out',
+                        'fade-in-right': 'fade-in-right 0.5s ease-out',
+                        'fade-in-left': 'fade-in-left 0.5s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 leading-relaxed">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5ZVBXT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Header Section -->
+    <header class="bg-gradient-to-br from-blue-950 via-black to-black text-white relative overflow-hidden min-h-[600px]">
+        <!-- Animated Waves -->
+        <div class="wave-container">
+            <div class="scrolling-pattern">
+                <img src="images/bannerpattern.png" alt="Pattern">
+                <img src="images/bannerpattern.png" alt="Pattern">
+                <img src="images/bannerpattern.png" alt="Pattern">
+            </div>
+        </div>
+        
+        <nav class="max-w-7xl mx-auto px-4 py-6 relative z-10 animate-fade-in-down">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="w-32 md:w-48 lg:w-64">
+                    <img 
+                        src="images/newlogo.png" 
+                        alt="Smart Pain Solutions Logo" 
+                        class="w-full h-auto"
+                    >
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/dot-physical-bridgeton-st-louis/" class="hover:text-blue-200 transition-colors duration-300">Home</a>
+                    <a href="/dot-physical-bridgeton-st-louis/#about" class="hover:text-blue-200 transition-colors duration-300">About</a>
+                    <a href="/dot-physical-bridgeton-st-louis/#contact" class="hover:text-blue-200 transition-colors duration-300">Contact</a>
+                </div>
+                <button class="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105">
+                    <a href="/dot-physical-bridgeton-st-louis/#contact">Contact Us</a>
+                </button>
+            </div>
+        </nav>
+        
+        <div class="max-w-7xl mx-auto px-4 py-12 md:py-20 relative">
+            <!-- Banner Image -->
+            <div class="absolute right-0 top-0 h-full w-4/5 md:w-3/5 lg:w-1/2 opacity-50 md:opacity-100 animate-float">
+                <img 
+                    src="images/new-about2.png" 
+                    alt="Medical Banner" 
+                    class="w-full h-full object-contain object-center"
+                >
+            </div>
+            
+            <div class="max-w-2xl relative z-10">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 animate-fade-in-up">Thank You!</h1>
+                <p class="text-lg md:text-xl mb-6 md:mb-8 animate-fade-in-up [animation-delay:200ms]">Your message has been received. We'll get back to you within 24 hours to schedule your consultation.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up [animation-delay:400ms]">
+                    <a href="/dot-physical-bridgeton-st-louis/" class="bg-white text-blue-600 px-6 md:px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105 text-center">
+                        Return to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Thank You Content Section -->
+    <section class="py-20 relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+            <div class="absolute inset-0 opacity-30 mix-blend-multiply">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 relative">
+            <div class="text-center mb-12">
+                <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold font-serif tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
+                    Message Sent Successfully!
+                </h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    We've received your inquiry and our team will contact you shortly.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">What Happens Next?</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-blue-600 font-semibold text-sm">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">We'll Review Your Information</h4>
+                                <p class="text-gray-600">Our team will review your details and prepare for your consultation.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-blue-600 font-semibold text-sm">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Contact Within 24 Hours</h4>
+                                <p class="text-gray-600">You'll receive a call or email to schedule your appointment.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-blue-600 font-semibold text-sm">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Begin Your Treatment</h4>
+                                <p class="text-gray-600">Start your journey to pain relief with our expert care.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group perspective-1000">
+                    <div class="relative transform transition-all duration-700 group-hover:scale-105 group-hover:-rotate-1">
+                        <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-transparent to-purple-500/20 mix-blend-overlay"></div>
+                            <img 
+                                src="images/about4.png" 
+                                alt="Whiplash Treatment" 
+                                class="w-full h-auto transform transition-transform duration-700 group-hover:scale-110"
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="mt-16 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+                    Need Immediate Assistance?
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Call Us</h4>
+                        <p class="text-gray-600">(555) 123-4567</p>
+                        <p class="text-sm text-gray-500">Available Mon-Fri 8AM-6PM</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Email Us</h4>
+                        <p class="text-gray-600">info@smartpainsolutions.com</p>
+                        <p class="text-sm text-gray-500">We'll respond within 2 hours</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Return to Home Button -->
+            <div class="text-center mt-12">
+                <a href="/dot-physical-bridgeton-st-louis/" class="group relative inline-flex items-center justify-center px-8 py-3 font-semibold tracking-wide text-white transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none">
+                    <span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-1 translate-y-1 bg-blue-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                    <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600 to-purple-600 border-2 border-white group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-blue-600"></span>
+                    <span class="relative">Return to Homepage</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <img src="images/newlogo.png" alt="Smart Pain Solutions Logo" class="w-48 mb-4">
+                    <p class="text-gray-400">Expert whiplash and injury care in St. Louis, helping you recover and regain your quality of life.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/dot-physical-bridgeton-st-louis/" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/dot-physical-bridgeton-st-louis/#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="/dot-physical-bridgeton-st-louis/#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>123 Main Street</li>
+                        <li>St. Louis, MO 63105</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Email: info@smartpainsolutions.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Smart Pain Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
