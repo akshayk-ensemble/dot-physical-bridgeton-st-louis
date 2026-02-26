@@ -305,7 +305,7 @@
                             <div>
                                 <select name="location" required
                                     class="w-full text-black px-4 py-2 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 bg-gray-50">
-                                    <option value="Bridgeton" selected>Bridgeton (Recommended for DOT)</option>
+                                    <option value="Bridgeton" selected>Bridgeton</option>
                                     <!-- <option value="Clayton">Clayton</option> -->
                                 </select>
                             </div>
@@ -377,7 +377,7 @@
             </div>
 
             <!-- Main Content Grid -->
-            <div class="grid lg:grid-cols-2 gap-16 items-start mb-16">
+            <div class="grid lg:grid-cols-2 gap-16 items-stretch mb-16">
                 <!-- Left Column - Problems -->
                 <div class="space-y-6">
                     <p class="text-gray-700 leading-relaxed text-lg">
@@ -462,19 +462,11 @@
                     </div>
                 </div>
 
-                <!-- Right Column - Image -->
-                <div class="relative group perspective-1000">
-                    <div
-                        class="relative transform transition-all duration-700 group-hover:scale-105 group-hover:-rotate-1">
-                        <div class="relative overflow-hidden rounded-2xl"
-                            style="--tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0); --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);">
-                            <div class="absolute inset-0 via-transparent"
-                                style="--tw-gradient-to: rgb(168 85 247 / 0); mix-blend-mode: overlay;"></div>
-                            <img src="images/newbanner1.webp" alt="Driver Health Check"
-                                class="w-full h-auto transform transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 transform transition-all duration-700 group-hover:scale-105 group-hover:border-blue-500/40">
-                            </div>
+                <!-- Right Column - Video (matches left column height, no white bg) -->
+                <div class="relative group perspective-1000 flex min-h-0">
+                    <div class="relative w-full h-full flex items-center justify-center transform transition-all duration-700 group-hover:scale-105 group-hover:-rotate-1">
+                        <div class="relative w-full max-w-[240px] max-h-full aspect-[9/16] overflow-hidden rounded-2xl min-w-0 mx-auto">
+                            <iframe class="w-full h-full rounded-2xl" src="https://www.youtube.com/embed/VxRLL--tKGc" title="YouTube Shorts" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -605,7 +597,7 @@
 
                         <!-- Image -->
                         <div class="relative group">
-                            <img src="images/doctors.png" alt="Driver Care"
+                            <img src="images/doctors-new.png" alt="Driver Care"
                                 class="w-full h-auto   transform transition-all duration-700 group-hover:scale-105 group-hover:-rotate-1">
                         </div>
                     </div>
@@ -973,7 +965,7 @@
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 relative">
+        <div class="max-w-7xl mx-auto px-2 relative">
             <div class="text-center mb-16">
                 <h2
                     class="text-4xl md:text-5xl font-bold font-serif tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
@@ -985,47 +977,59 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Review 1 -->
-                <div class="group relative h-full">
+                <div class="h-full group relative">
                     <div
                         class="relative rounded-xl shadow-lg transform transition-all duration-300 group-hover:scale-105 bg-white/90 backdrop-blur-sm p-6 h-full flex flex-col">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="font-semibold text-gray-800">James T., CDL Driver</div>
+                        <div class="flex items-center justify-between">
+                            <div class="font-semibold text-gray-800">Lady K</div>
                             <div class="flex text-yellow-400">
                                 <span class="text-sm">★★★★★</span>
                             </div>
                         </div>
-                        <p class="text-gray-600 flex-grow">"In and out in 45 minutes. No hassle, fair price. Dr. Andel
-                            knew exactly what he was doing and got me back on the road fast."</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-gray-600 text-xs">7 months ago</span>
+                        </div>
+                        <p class="text-gray-600 flex-grow">"Awesome and affordable comes to mind when I
+                            think of this company. Professional and friendly staff. I was nervous about
+                            renewing my CDL after 2 years but the staff made me feel so much better just
+                            doing my DOT Medical exam today and I felt encouraged. Thank you guys again
+                            🫶🏽"</p>
                     </div>
                 </div>
 
                 <!-- Review 2 -->
-                <div class="group relative h-full">
+                <div class="h-full group relative">
                     <div
                         class="relative rounded-xl shadow-lg transform transition-all duration-300 group-hover:scale-105 bg-white/90 backdrop-blur-sm p-6 h-full flex flex-col">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="font-semibold text-gray-800">Robert M.</div>
+                        <div class="flex items-center justify-between">
+                            <div class="font-semibold text-gray-800">Charles H.</div>
                             <div class="flex text-yellow-400">
                                 <span class="text-sm">★★★★★</span>
                             </div>
                         </div>
-                        <p class="text-gray-600 flex-grow">"Best DOT exam I've had in 15 years of driving. Professional,
-                            clean office, and they handled all the FMCSA paperwork electronically for me."</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-gray-600 text-xs">4 years ago</span>
+                        </div>
+                        <p class="text-gray-600 flex-grow">"For years I have experienced lower back discomfort, with it turning to pain occasionally. I have always gotten massages, and they are great but temporary. I visited Smart Pain for a DOT physical and was pleased with that. I spoke with Dr. Katie about their services and decided to give it a shot. Wise choice. I have had 4 sessions now but I felt much relief after the 2nd. The relief has been steady, unlike after a massage. Both Dr. Katie and Dr. Bo are very friendly, professional, and knowledgeable. The same can be said of the support staff.
+                            I also appreciate there is no pressuring you to return. They establish a plan to get you better and that's the extent of it.
+                            Finally, you should check Dany out for a massage! She gets it done."</p>
                     </div>
                 </div>
 
                 <!-- Review 3 -->
-                <div class="group relative h-full">
+                <div class="h-full group relative">
                     <div
                         class="relative rounded-xl shadow-lg transform transition-all duration-300 group-hover:scale-105 bg-white/90 backdrop-blur-sm p-6 h-full flex flex-col">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="font-semibold text-gray-800">Sarah L.</div>
+                        <div class="flex items-center justify-between">
+                            <div class="font-semibold text-gray-800">Stacey Cloven</div>
                             <div class="flex text-yellow-400">
                                 <span class="text-sm">★★★★★</span>
                             </div>
                         </div>
-                        <p class="text-gray-600 flex-grow">"Easy access off I-70 and convenient parking. I was worried
-                            about my BP, but the doctor was patient and helpful. Highly recommend!"</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-gray-600 text-xs">4 years ago</span>
+                        </div>
+                        <p class="text-gray-600 flex-grow">"I love Smart Pain Solutions! I went to them through referral and am not disappointed. Their staff is very friendly and they go above and beyond to resolve your needs. They have an experienced professional team that work together cohesively. I am physically the best I've been in years due to Smart Pain Solutions! Thank you!"</p>
                     </div>
                 </div>
             </div>
@@ -1148,7 +1152,7 @@
                             <div
                                 class="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-transparent to-purple-500/20 mix-blend-overlay">
                             </div>
-                            <img src="images/about4.png" alt="DOT Certified Examiner"
+                            <img src="images/faq.webp" alt="DOT Certified Examiner"
                                 class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
                         </div>
                     </div>
@@ -1265,7 +1269,7 @@
                         </a>
                     </div>
                     <div class="mt-4">
-                        <img src="images/doctors.png" alt="Contact Information"
+                        <img src="images/doctors-new.png" alt="Contact Information"
                             class="w-full h-auto rounded-lg shadow-lg">
                     </div>
                 </div>
@@ -1306,6 +1310,21 @@
             </div>
         </div>
     </footer>
+<!-- Floating Call Button -->
+<a href="tel:3142376822"
+class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-4 rounded-full shadow-2xl hover:bg-blue-700 transition-all duration-300 hover:scale-110 group animate-float border-4 border-white">
+<div class="flex items-center space-x-2">
+    <svg class="w-6 h-6 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+        </path>
+    </svg>
+</div>
+<div
+    class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white animate-ping opacity-75">
+</div>
+</a>
+
 
     <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
