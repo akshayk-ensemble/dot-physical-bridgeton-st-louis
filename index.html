@@ -282,6 +282,7 @@
                         <p class="text-gray-600 mb-6 text-sm">Fill out the form below to request your appointment.</p>
 
                         <form class="space-y-4" name="contact" method="POST" id="contactForm">
+                             <input type="hidden" name="page_url" id="page_url">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <input type="text" name="name" placeholder="Your Name" required
@@ -1338,6 +1339,12 @@ class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-4 rounded-full shado
             const form = document.querySelector('#contactForm');
 
             if (form) {
+                // Set the current URL in the hidden field
+                const urlField = document.querySelector('#page_url');
+                if (urlField) {
+                    urlField.value = window.location.href;
+                }
+
                 form.addEventListener('submit', function (e) {
                     e.preventDefault();
 
@@ -1353,9 +1360,10 @@ class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-4 rounded-full shado
                         privacy: formData.get('privacy') === 'on',
                         newsletter: formData.get('newsletter') === 'on',
                         timestamp: new Date().toISOString(),
-                        source: 'dot-physical-homepage'
+                        source: 'dot-physical-homepage',
+                        page_url: window.location.href
                     };
-
+                    
                     // Submit to n8n webhook
                     fetch('https://n8n-automation.techsoit.com/webhook/DOTForm', {
                         method: 'POST',
